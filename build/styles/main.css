@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html {
   font-size: .625em;
   /* IE8+ */
@@ -127,86 +128,69 @@ pre, code {
 small {
   line-height: 1.5em; }
 
-.btnLg {
-  font-size: 2rem; }
-
-.btnSml {
-  font-size: 1rem; }
-
 .btn {
   border: none;
   text-decoration: none;
-  background-color: black;
+  background-color: #888;
   color: white;
   padding: 1em 2em;
   letter-spacing: .1em;
   border-radius: 3px;
   transition: box-shadow 300ms;
   font-family: Open Sans, Arial, sans-serif;
-  font-size: 1.2rem; }
-  .btn-primary--blue {
+  font-size: 1.4rem;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #767676; }
+  .btn:active {
+    background-color: #555555; }
+  .btn--lg {
+    font-size: 2rem; }
+  .btn--sml {
+    font-size: 1.2rem; }
+  .btn-danger {
+    background-color: #E55; }
+    .btn-danger:hover {
+      box-shadow: 0px 0px 0px 1px #E55 inset, 0px 0px 0px 2px white inset;
+      background-color: #eb3535; }
+    .btn-danger:active {
+      background-color: #e01616; }
+  .btn--blue {
     background-color: #06D; }
-    .btn-primary--blue:hover {
-      box-shadow: 0px 0px 0px 1px #06D inset, 0px 0px 0px 2px white inset; }
-  .btn-primary--red {
-    background-color: #E33; }
-    .btn-primary--red:hover {
-      box-shadow: 0px 0px 0px 1px #E33 inset, 0px 0px 0px 2px white inset; }
-  .btn-primary--green {
+  .btn--red {
+    background-color: #E55; }
+  .btn--green {
     background-color: #0D6; }
-    .btn-primary--green:hover {
-      box-shadow: 0px 0px 0px 1px #0D6 inset, 0px 0px 0px 2px white inset; }
-  .btn-secondary--blue {
-    background-color: var(--blue-color); }
-    .btn-secondary--blue:hover {
-      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #06D; }
-  .btn-secondary--red {
-    background-color: #E33; }
-    .btn-secondary--red:hover {
-      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #E33; }
-  .btn-secondary--green {
-    background-color: #0D6; }
-    .btn-secondary--green:hover {
-      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #0D6; }
+  .btn-primary {
+    background-color: #06D; }
+    .btn-primary:hover {
+      box-shadow: 0px 0px 0px 1px #06D inset, 0px 0px 0px 2px white inset;
+      background-color: #0056b9; }
+    .btn-primary:active {
+      background-color: #004391; }
+  .btn-secondary {
+    background-color: #E55; }
+    .btn-secondary:hover {
+      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #E55;
+      background-color: #eb3535; }
+    .btn-secondary:active {
+      background-color: #c91414; }
 
-.btn--blue {
-  background-color: #06D; }
-
-.btn--red {
-  background-color: #E33; }
-
-.btn--green {
-  background-color: #0D6; }
-
-.btn--grey {
-  background-color: #999; }
-
-.btn-secondary:hover {
-  box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px currentColor; }
-
-.btn-primary:hover {
-  box-shadow: 0px 0px 0px 1px currentColor inset, 0px 0px 0px 2px white inset; }
-
-.btn-4 {
-  background-color: #FC0;
+.btn-flip {
   border-radius: 0;
-  box-shadow: 4px 4px 2px #AAA;
+  box-shadow: 3px 3px 2px #AAA;
   position: relative; }
 
-.btn-4:active {
-  top: 5px;
-  left: 5px;
-  box-shadow: 2px 2px 1px #888; }
+.btn-flip:active {
+  top: 2px;
+  left: 2px;
+  box-shadow: 1px 1px 1px #888; }
 
-.btn-4:hover {
-  background-color: #C90; }
-
-.btn-5 {
-  background: #0AA;
+.btn-exp {
   position: relative;
   border-radius: 0; }
 
-.btn-5:after {
+.btn-exp:after {
   content: "";
   display: block;
   height: 2px;
@@ -217,9 +201,38 @@ small {
   left: 1%;
   transition: all 1s ease-in-out; }
 
-.btn-5:hover:after {
+.btn-exp:hover:after {
   position: absolute;
   left: 50%;
   right: 50%; }
+
+.alert_success--big, .alert_error--big, .alert_warning--big, .alert_info--big {
+  min-height: 100px;
+  border-left-style: solid;
+  border-left-width: 5px; }
+
+.alert_success--toast, .alert_error--toast, .alert_warning--toast, .alert_info--toast {
+  border-bottom-style: solid;
+  border-bottom-width: 5px; }
+
+.alert {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 1.2em;
+  color: black;
+  border-radius: 5px; }
+  .alert_success {
+    background-color: #0F8;
+    border-color: #009952; }
+  .alert_error {
+    background-color: #E66;
+    border-color: #d61818; }
+  .alert_warning {
+    background-color: #D83;
+    border-color: #925518; }
+  .alert_info {
+    background-color: #0BF;
+    border-color: #007099; }
 
 /*# sourceMappingURL=main.css.map */

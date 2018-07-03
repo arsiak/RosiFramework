@@ -1,0 +1,63 @@
+
+%bigAlert {
+    min-height: 100px;
+    border-left-style: solid;
+    border-left-width: 5px;
+}
+
+%toastAlert {
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+}
+
+.alert {
+    width: 100%;
+    display: block;
+    text-align:center;
+    padding: 1.2em;
+    color:black;
+    border-radius: 5px;
+    &_success{
+        background-color: $green-alert;
+        border-color: darken($green-alert, 20%);
+        &--big {
+            @extend %bigAlert;
+        }
+        &--toast {
+            @extend %toastAlert;
+        }
+    }
+
+    &_error {
+        background-color: $red-alert;
+        border-color: darken($red-alert, 20%);
+        &--big {
+            @extend %bigAlert;
+        }
+        &--toast {
+            @extend %toastAlert;
+        }
+    }
+
+    &_warning {
+        background-color: $orange-alert;
+        border-color: darken($orange-alert, 20%);
+        &--big {
+            @extend %bigAlert;
+        }
+        &--toast {
+            @extend %toastAlert;
+        }
+    }
+
+    &_info {
+        background-color: $blue-alert;
+        border-color: darken($blue-alert,20%);
+        &--big {
+            @extend %bigAlert;
+        }
+        &--toast {
+            @extend %toastAlert;
+        }
+    }
+}
