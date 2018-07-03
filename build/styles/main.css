@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+html {
+  font-size: .625em;
+  /* IE8+ */
+  font-size: calc(1em * .625);
+  /* IE9-IE11 math fixing.*/ }
+
+body {
+  font-size: 1.8rem;
+  font-family: Open Sans, Arial, sans-serif;
+  line-height: 1.5em;
+  color: #333; }
+
+h1 {
+  font-size: 4.6rem; }
+
+h2 {
+  font-size: 3.6rem; }
+
+h3 {
+  font-size: 2.8rem; }
+
+h4 {
+  font-size: 2.2rem; }
+
+h5 {
+  font-size: 1.8rem; }
+
+h6 {
+  font-size: 1.6rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em; }
+
+small {
+  font-weight: lighter;
+  font-size: 0.6em;
+  color: #888; }
+
+.small {
+  font-weight: lighter;
+  font-size: 0.6em;
+  color: #888; }
+
+p {
+  margin-bottom: 1.5em; }
+
+mark {
+  background-color: yellow;
+  color: black; }
+
+ins {
+  text-decoration: underline; }
+
+del {
+  text-decoration: line-through; }
+
+u {
+  text-decoration: underline; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+abbr[title], acronym[title] {
+  text-decoration: none;
+  border-bottom: 1px dotted red; }
+
+.left {
+  text-align: left; }
+
+.justify {
+  text-align: justify; }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.list-default {
+  list-style-type: circle; }
+
+.list-square {
+  list-style-type: square; }
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+pre {
+  white-space: pre;
+  tab-size: 4;
+  word-break: break-all;
+  color: #666666;
+  border-left: 3px solid #7b7b7b;
+  max-width: 800px;
+  padding: 30px 15px;
+  position: relative;
+  display: block; }
+
+pre, code {
+  padding: 0;
+  background: #f7f7f7; }
+
+ol, ul {
+  line-height: 1.5em; }
+
+a {
+  line-height: 1.5em; }
+
+blockquote {
+  line-height: 1.5em; }
+
+pre, code {
+  line-height: 1.5em; }
+
+small {
+  line-height: 1.5em; }
+
+.btnLg {
+  font-size: 2rem; }
+
+.btnSml {
+  font-size: 1rem; }
+
+.btn {
+  border: none;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+  letter-spacing: .1em;
+  border-radius: 3px;
+  transition: box-shadow 300ms;
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 1.2rem; }
+  .btn-primary--blue {
+    background-color: #06D; }
+    .btn-primary--blue:hover {
+      box-shadow: 0px 0px 0px 1px #06D inset, 0px 0px 0px 2px white inset; }
+  .btn-primary--red {
+    background-color: #E33; }
+    .btn-primary--red:hover {
+      box-shadow: 0px 0px 0px 1px #E33 inset, 0px 0px 0px 2px white inset; }
+  .btn-primary--green {
+    background-color: #0D6; }
+    .btn-primary--green:hover {
+      box-shadow: 0px 0px 0px 1px #0D6 inset, 0px 0px 0px 2px white inset; }
+  .btn-secondary--blue {
+    background-color: var(--blue-color); }
+    .btn-secondary--blue:hover {
+      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #06D; }
+  .btn-secondary--red {
+    background-color: #E33; }
+    .btn-secondary--red:hover {
+      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #E33; }
+  .btn-secondary--green {
+    background-color: #0D6; }
+    .btn-secondary--green:hover {
+      box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px #0D6; }
+
+.btn--blue {
+  background-color: #06D; }
+
+.btn--red {
+  background-color: #E33; }
+
+.btn--green {
+  background-color: #0D6; }
+
+.btn--grey {
+  background-color: #999; }
+
+.btn-secondary:hover {
+  box-shadow: 0px 0px 0px 1px white, 0px 0px 0px 2px currentColor; }
+
+.btn-primary:hover {
+  box-shadow: 0px 0px 0px 1px currentColor inset, 0px 0px 0px 2px white inset; }
+
+.btn-4 {
+  background-color: #FC0;
+  border-radius: 0;
+  box-shadow: 4px 4px 2px #AAA;
+  position: relative; }
+
+.btn-4:active {
+  top: 5px;
+  left: 5px;
+  box-shadow: 2px 2px 1px #888; }
+
+.btn-4:hover {
+  background-color: #C90; }
+
+.btn-5 {
+  background: #0AA;
+  position: relative;
+  border-radius: 0; }
+
+.btn-5:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 0%;
+  right: 1%;
+  left: 1%;
+  transition: all 1s ease-in-out; }
+
+.btn-5:hover:after {
+  position: absolute;
+  left: 50%;
+  right: 50%; }
+
+/*# sourceMappingURL=main.css.map */
