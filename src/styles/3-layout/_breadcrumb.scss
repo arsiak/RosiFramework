@@ -1,0 +1,90 @@
+.breadcrumb {
+    @extend .list; 
+    overflow: hidden; 
+    font-size: 1rem;
+
+    li {
+        float:left;
+        a {
+          color: white;
+          text-decoration: none; 
+          padding: 1em 0 1em 5em;
+          background: grey; /* fallback color */
+          position: relative; 
+          display: block;
+          float: left;
+        }
+    }
+}
+
+// Triangle 
+.breadcrumb li a::after { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid grey;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  left: 100%;
+  z-index: 2; 
+}
+
+// Triangle entre les liens
+.breadcrumb li a::before { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;       
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1; 
+}
+
+//hover breadcrumbs
+.breadcrumb li a:hover { 
+  background: darken(grey, 20%); 
+}
+.breadcrumb li a:hover:after { 
+  border-left-color: darken(grey, 20%);
+}
+
+.breadcrumb--classic {
+    padding: 1em 2em;
+    @extend .list;
+    background-color: grey;
+
+    li {
+        display: inline;
+        font-size: 1.4rem;
+    }
+    /* Add a slash symbol (/) before/behind each list item */
+    li+li:before {
+        padding: 8px;
+        color: black;
+        content: "\003e";
+    }
+
+    /* Add a color to all links inside the list */
+    li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    /* Add a color on mouse-over */
+    li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+}
+
+

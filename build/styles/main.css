@@ -93,7 +93,7 @@ abbr[title], acronym[title] {
 .list-square {
   list-style-type: square; }
 
-.list {
+.list, .navbar, .breadcrumb, .breadcrumb--classic {
   list-style-type: none;
   margin: 0;
   padding: 0; }
@@ -127,6 +127,132 @@ pre, code {
 
 small {
   line-height: 1.5em; }
+
+.navbar {
+  width: 100%;
+  display: none; }
+  .navbar__item__link {
+    text-decoration: none;
+    color: #222;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid black; }
+  .navbar__item__link:hover {
+    color: #ff00dd; }
+  .navbar__hamburger {
+    font-size: 4rem;
+    cursor: pointer;
+    display: block; }
+    .navbar__hamburger__checkbox {
+      display: none; }
+    .navbar__hamburger__checkbox:checked + .navbar {
+      display: block; }
+  @media screen and (min-width: 769px) {
+    .navbar {
+      display: flex;
+      justify-content: flex-end; }
+      .navbar__item {
+        position: relative; }
+      .navbar__item__link {
+        border-bottom: none; }
+        .navbar__item__link--disabled {
+          pointer-events: none;
+          cursor: default;
+          text-decoration: none; }
+        .navbar__item__link--active {
+          color: #ff00dd; }
+      .navbar__item__link:after {
+        content: "";
+        display: block;
+        height: 2px;
+        background: black;
+        position: absolute;
+        bottom: 0%;
+        right: 10%;
+        left: 10%;
+        transition: all 1s ease-in-out; }
+      .navbar__item__link:hover:after {
+        position: absolute;
+        left: 50%;
+        right: 50%; }
+      .navbar__hamburger {
+        display: none; }
+        .navbar__hamburger__checkbox {
+          display: none; } }
+
+.breadcrumb {
+  overflow: hidden;
+  font-size: 1rem; }
+  .breadcrumb li {
+    float: left; }
+    .breadcrumb li a {
+      color: white;
+      text-decoration: none;
+      padding: 1em 0 1em 5em;
+      background: grey;
+      /* fallback color */
+      position: relative;
+      display: block;
+      float: left; }
+
+.breadcrumb li a::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid grey;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2; }
+
+.breadcrumb li a::before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1; }
+
+.breadcrumb li a:hover {
+  background: #4d4d4d; }
+
+.breadcrumb li a:hover:after {
+  border-left-color: #4d4d4d; }
+
+.breadcrumb--classic {
+  padding: 1em 2em;
+  background-color: grey;
+  /* Add a slash symbol (/) before/behind each list item */
+  /* Add a color to all links inside the list */
+  /* Add a color on mouse-over */ }
+  .breadcrumb--classic li {
+    display: inline;
+    font-size: 1.4rem; }
+  .breadcrumb--classic li + li:before {
+    padding: 8px;
+    color: black;
+    content: "\003e"; }
+  .breadcrumb--classic li a {
+    color: #0275d8;
+    text-decoration: none; }
+  .breadcrumb--classic li a:hover {
+    color: #01447e;
+    text-decoration: underline; }
 
 .btn {
   border: none;
@@ -209,19 +335,20 @@ small {
 .alert_success--big, .alert_error--big, .alert_warning--big, .alert_info--big {
   min-height: 100px;
   border-left-style: solid;
-  border-left-width: 5px; }
+  border-left-width: 10%; }
 
 .alert_success--toast, .alert_error--toast, .alert_warning--toast, .alert_info--toast {
   border-bottom-style: solid;
-  border-bottom-width: 5px; }
+  border-bottom-width: 10%; }
 
 .alert {
+  margin: 10px;
   width: 100%;
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 1.2em;
   color: black;
-  border-radius: 5px; }
+  border-radius: 2px; }
   .alert_success {
     background-color: #0F8;
     border-color: #009952; }

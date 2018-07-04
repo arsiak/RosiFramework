@@ -2,21 +2,23 @@
 %bigAlert {
     min-height: 100px;
     border-left-style: solid;
-    border-left-width: 5px;
+    border-left-width: 10%;
 }
 
 %toastAlert {
     border-bottom-style: solid;
-    border-bottom-width: 5px;
+    border-bottom-width: 10%;
 }
 
 .alert {
+    margin: 10px;
     width: 100%;
     display: block;
-    text-align:center;
+    text-align:left;
     padding: 1.2em;
     color:black;
-    border-radius: 5px;
+    border-radius: 2px;
+
     &_success{
         background-color: $green-alert;
         border-color: darken($green-alert, 20%);
