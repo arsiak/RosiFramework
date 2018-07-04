@@ -53,16 +53,41 @@
         <li>etccc</li>
         <pre>
             <code>
-            pre {
-                white-space:pre;
-                overflow-x:auto;
-                tab-size: 4;
-                word-break: break-all;
-                color: #666666;
-            }
+pre {
+    white-space:pre;
+    overflow-x:auto;
+    tab-size: 4;
+    word-break: break-all;
+    color: #666666;
+}
             </code>
         </pre>
     </ul>
+    <blockquote> Make some shit 
+    <cite>Arnaud Rosiak</cite>
+    </blockquote>
+
+    <form class="form">
+        <label for="name">
+            Nom :
+            <div class="input-help">Veuillez entrez un pseudo</div>
+            <div class="input--error-message">Doit faire entre 12 et 13 </div>
+            <input type="text" name="test" id="name" class="input input--error"/>
+        </label>
+        <label for="password">
+            Mot de passe
+            <input type="password" name="password" id="password" class="input"/>
+        </label>
+        <label>Checkbox example:
+            <input type="checkbox" class="input__checkbox">
+            <span class="checkmark"></span>
+            <input type="checkbox" class="input__checkbox">
+            <span class="checkmark"></span>
+            <input type="checkbox" class="input__checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <input type="submit" name="valid" value="submit" class="btn btn-primary"/>
+    </form>
     <abbr title="World Health Organization">WHO</abbr>
 
     <div class="container">

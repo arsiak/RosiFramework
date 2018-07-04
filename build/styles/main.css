@@ -100,17 +100,18 @@ abbr[title], acronym[title] {
 
 pre {
   white-space: pre;
-  tab-size: 4;
+  overflow: auto;
   word-break: break-all;
   color: #666666;
-  border-left: 3px solid #7b7b7b;
-  max-width: 800px;
-  padding: 30px 15px;
-  position: relative;
-  display: block; }
+  border-left: 10px solid #7b7b7b;
+  display: block;
+  margin: 0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black; }
 
 pre, code {
-  padding: 0;
+  padding-left: 1em;
   background: #f7f7f7; }
 
 ol, ul {
@@ -127,6 +128,16 @@ pre, code {
 
 small {
   line-height: 1.5em; }
+
+blockquote {
+  margin: 0 0 1.5em;
+  padding: 0 0 0 15px;
+  border-left: 5px solid #e6e6e6; }
+
+blockquote cite {
+  display: block;
+  color: #b1b2b4;
+  font-style: italic; }
 
 .container {
   width: 90%;
@@ -476,5 +487,38 @@ small {
   .alert_info {
     background-color: #0BF;
     border-color: #007099; }
+
+.input {
+  width: 100%;
+  padding: 1em 1em;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none; }
+  .input:focus {
+    border: 3px solid #555;
+    border-radius: 4px; }
+  .input-help {
+    display: block;
+    font-size: 1.4rem;
+    color: #b3b3b3;
+    font-style: italic;
+    line-height: 1em; }
+  *
+  .input--error {
+    border: 1px solid #E55; }
+  .input--error-message {
+    display: block;
+    font-size: 1.4rem;
+    color: #E55;
+    line-height: 1em;
+    font-weight: bold; }
+  .input--success {
+    border: 1px solid #0D6; }
 
 /*# sourceMappingURL=main.css.map */

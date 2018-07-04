@@ -1,0 +1,46 @@
+
+.input {
+    width: 100%;
+    padding: 1em 1em;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+     -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+    &:focus{
+        border: 3px solid #555;
+        border-radius: 4px;
+    }
+
+    &-help{
+        display: block;
+        font-size: 1.4rem;
+        color: lighten(grey, 20%);
+        font-style: italic;
+        line-height: 1em;       
+    }
+*
+    &--error {
+        border: 1px solid $red;
+
+
+    }
+
+    &--error-message {
+        display: block;
+        font-size: 1.4rem;
+        color: $red;
+        line-height: 1em;
+        font-weight: bold;
+    }
+
+    &--success {
+        border: 1px solid $green;
+    }
+}
+
